@@ -107,3 +107,25 @@ a { color: inherit; text-decoration: none; }
   .site-footer span:nth-child(2) { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+
+/* Profile photo and resume-based sections */
+.hero { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(230px,.65fr); align-items:center; gap:55px; }
+.hero-copy { min-width:0; }
+.hero-role { color:var(--accent); font-size:14px; font-weight:600; margin:-12px 0 18px; }
+.hero-links { display:flex; flex-direction:row; align-items:center; flex-wrap:wrap; gap:12px; margin-top:23px; }
+.button-outline { border:1px solid var(--line); color:var(--text); }
+.hero-contact { display:flex; flex-wrap:wrap; gap:10px; margin-top:19px; color:var(--muted); font-size:11px; }
+.hero-contact a:hover,.contact-details a:hover { color:var(--accent); }
+.hero-note { margin-top:34px; }
+.hero-portrait-wrap { max-width:310px; justify-self:end; width:100%; }
+.portrait-frame { padding:9px; border:1px solid #3a4336; background:linear-gradient(145deg,#242a20,#141811); box-shadow:0 24px 70px #0007; }
+.hero-portrait { display:block; width:100%; aspect-ratio:3/4; object-fit:cover; object-position:center 24%; }
+.portrait-caption { display:flex; justify-content:space-between; gap:10px; padding-top:13px; color:var(--subtle); font:9px var(--mono); letter-spacing:.8px; }
+.certification-section { padding-top:75px; padding-bottom:80px; border-top:1px solid var(--line); }
+.certification-card { display:flex; align-items:center; gap:22px; max-width:620px; margin-top:26px; padding:22px; background:var(--surface); border:1px solid var(--line); }
+.certification-mark { width:48px; height:48px; display:grid; place-items:center; flex:none; border:1px solid #536044; color:var(--accent); font-size:26px; }
+.certification-card h3 { margin:0 0 3px; font-size:16px; }
+.certification-card p { margin:0 0 8px; color:var(--muted); font-size:12px; }
+.contact-details { color:var(--muted); font-size:12px; }
+@media (max-width:760px) { .hero { grid-template-columns:1fr; gap:35px; } .hero-portrait-wrap { justify-self:start; max-width:250px; } .hero-links { flex-direction:row; } }
+@media (max-width:480px) { .hero-portrait-wrap { max-width:220px; } .hero-contact { font-size:10px; } .certification-card { align-items:flex-start; padding:16px; } }
